@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+	<h:body>
+		<ui:composition>
+			<h1 class="h01"> 球場データ登録  </h1>
+			<h:form>
+				<h:panelGrid columns="2" styleClass="table" columnClasses="c1, c2" >
+					球場名<h:inputText value="#{bb.name}"/>
+					年度<h:selectOneListbox size="1" value="#{bb.year}">
+						<f:selectItems value="#{bb.yearItems}"/>
+					</h:selectOneListbox>
+
+					収容人数<h:inputText value="#{bb.cap}"/>
+					<h:panelGroup/>
+					<h:commandButton value="登録" action="#{bb.next()}"/>
+				</h:panelGrid>
+			</h:form>
+			<hr/>
+			<h:dataTable value="#{bb.all}" var="item" styleClass="ct1" headerClass="ct1">
+				<h:column>
+					<f:facet name="header">球場名</f:facet>
+					#{item.id.name}
+				</h:column>
+				<h:column>
+					<f:facet name="header">年度</f:facet>
+					#{item.id.fyear}
+				</h:column>
+				<h:column>
+					<f:facet name="header">収容人数</f:facet>
+					#{item.capacity}
+				</h:column>
+			</h:dataTable>
+			<hr/>
+		</ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,37 @@
+body {
+    font-family: メイリオ ,Osaka;	/* 全体のフォント */
+    font-size: 10pt;				/* 全体の文字サイズ */
+    margin: 20px 10px 10px 20px;	/* 上右下左の順でマージンを指定 */
+    line-height: 1.6em;
+}
+
+address{
+    font-style: normal;				/* 斜体字にしない */
+    font-size: 0.7em;				/* 文字サイズ（小） */
+    text-align: center;				/* 中央揃え */
+    border-top: solid 1px #999;		/* ボーダーライン（上） */
+    clear:both;
+	margin: 0 auto;
+}	
+h1.h01{
+	font-size: 1.5em;
+	text-align: center;
+	margin-bottom: 5px;
+	padding-right: 30px;
+}
+
+.c1{}
+
+.c2{
+	text-align: center;
+}
+
+.ct1{
+	width: 400px;
+	text-align: center;
+}
+.table{
+	padding-right: 80px;
+	margin: 0 auto;
+}
+
